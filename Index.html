@@ -5,115 +5,162 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Simulator India Mods | Download Free</title>
     <style>
-  /* General Styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-        }
+    /* --- Global Styles --- */
+:root {
+    --primary-red: #e63946;
+    --dark-bg: #0f0f12;
+    --card-bg: #1e1e24;
+    --text-light: #f1faee;
+    --accent-blue: #457b9d;
+    --transition: all 0.3s ease;
+}
 
-        header {
-            text-align: center;
-            background-color: #004a99;
-            color: white;
-            padding: 1rem 0;
-    ==        text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.6;
+}
 
-        nav {
-            background: #003366;
-            padding: 10px;
-            text-align: center;
-        }
+/* --- Header & Navigation --- */
+header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000') no-repeat center/cover;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid var(--primary-red);
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+nav {
+    background: #16161a;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
 
-        /* Mod Grid Layout */
-        .container {
-            max-width: 1100px;
-            margin: 20px auto;
-            padding: 20px;
-        }
+nav a:hover {
+    color: var(--primary-red);
+}
 
-        .mod-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+/* --- Hero Section --- */
+.hero {
+    padding: 60px 20px;
+    background: radial-gradient(circle, #232526 0%, #000000 100%);
+}
 
-        .mod-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
 
-        .mod-card:hover {
-            transform: translateY(-5px);
-        }
+/* --- Mod Grid & Cards --- */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-        .mod-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+.mod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
 
-        .mod-info {
-            padding: 15px;
-        }
+.mod-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+}
 
-        .mod-info h3 {
-            margin: 0 0 10px;
-            color: #004a99;
-        }
+.mod-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-color: var(--primary-red);
+}
 
-        .mod-info p {
-            font-size: 0.9rem;
-            color: #666;
-        }
+.mod-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
 
-        .download-btn {
-            display: block;
-            background-color: #28a745;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+.mod-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        .download-btn:hover {
-            background-color: #218838;
-        }
+.mod-info h3 {
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.2rem;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-            margin-top: 40px;
-            }
+.mod-info p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* --- Download Button --- */
+.download-btn {
+    display: block;
+    text-align: center;
+    background-color: var(--primary-red);
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.download-btn:hover {
+    background-color: #b91d2a;
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.4);
+}
+
+/* --- Footer --- */
+footer {
+    background: #000;
+    padding: 40px 20px;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+footer pre {
+    font-family: inherit;
+    color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mod-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
     </style>
 </head>
 <body>
