@@ -1,80 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus Simulator India Mods | Download Free</title>
     <style>
-    /* --- Global Styles --- */
-:root {
-    --primary-red: #e63946;
-    --dark-bg: #0f0f12;
-    --card-bg: #1e1e24;
-    --text-light: #f1faee;
-    --accent-blue: #457b9d;
-    --transition: all 0.3s ease;
-}
+        /* --- Global Styles --- */
+        :root {
+            --primary-red: #c9e803;
+            --dark-bg: #0f0f12;
+            --card-bg: #1e1e24;
+            --text-light: #f1faee;
+            --accent-blue: #457b9d;
+            --transition: all 0.3s ease;
+        }
 
-body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--dark-bg);
-    color: var(--text-light);
-    margin: 0;
-    line-height: 1.6;
-}
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.6;
+        }
 
-/* --- Header & Navigation --- */
-header {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000') no-repeat center/cover;
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 3px solid var(--primary-red);
-}
+        /* --- Header & Navigation --- */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000') no-repeat center/cover;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--primary-red);
+        }
 
-nav {
-    background: #16161a;
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+        nav {
+            background: #16161a;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: var(--transition);
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
 
-nav a:hover {
-    color: var(--primary-red);
-}
+        nav a:hover {
+            color: var(--primary-red);
+        }
 
-/* --- Hero Section --- */
-.hero {
-    padding: 60px 20px;
-    background: radial-gradient(circle, #232526 0%, #000000 100%);
-}
+        /* --- Hero Section --- */
+        .hero {
+            padding: 60px 20px;
+            background: radial-gradient(circle, #232526 0%, #000000 100%);
+        }
 
-.hero h1 {
-    font-size: 2.5rem;
-    color: var(--primary-red);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-/* --- Mod Grid & Cards --- */
-.container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
+        /* --- Mod Grid & Cards --- */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-.mod-grid {
+        .mod-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .mod-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mod-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border-color: var(--primary-red);
+        }
+
+        .mod-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .mod-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .mod-info h3 {
+            margin-top: 0;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .mod-info p {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        /* --- Download Button --- */
+        .download-btn {
+            display: block;
+            text-align: center;
+            background-color: var(--primary-red);
+            color: rgb(6, 1, 1);
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .download-btn:hover {
+            background-color: #b91d2a;
+            box-shadow: 0 0 15px rgba(230, 57, 70, 0.4);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #000;
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        footer pre {
+            font-family: inherit;
+            color: #888;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .mod-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<body>
+
+    <header>
+       <h1>🚌 Bus Simulator India Mods 🚌</h1>
+
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="car.html">Car Mods</a>
+        <a href="truck.html">Truck Mods</a>
+    </nav>
+
+    <section class="hero">
+        <div>
+            <h1 style="text-align: center;">DM - BUSSIN GAMING</h1>
+
+            <div style="display: flex; justify-content: center; margin-top: 20px;">
+                <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 2px solid #ccc;">
+                    <img src="Picsart_26-04-06_10-04-56-816.png" alt="Logo"
+                        style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            </div>
+
+            <h2 style="text-align: center; margin-top: 10px;">Premium Indian Mods</h2>
+
+            <p>Download the latest GSRTC, Private, Luxury bus, truck,car and other indian vehicle mods for your
+                simulator.</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="mod-grid">
+
+            <div class="mod-card">
+                <img src="IMG-20260405-WA0003.jpg" alt="blue bus mod">
+                <div class="mod-info">
+                    <h3>BLUE GSRTC BUS MOD</h3>
+                    <p>High-quality interior, realistic sound, and multiple Indian liveries included.</p>
+                    <a href="Oyster_middledoor_crs.zip" class="download-btn">Download Mod (19 Mb) </a>
+                </div>
+            </div>
+
+            <div class="mod-card">
+                <img src="bus2.jpg" alt=" Alankar bus mod">
+                <div class="mod-info">
+                    <h3> અલંકાર ટ્રાવેલ્સ બસ mod </h3>
+                    <p>The latest Alankar bus mod with detailed textures and working wipers.</p>
+                    <a href="Mods.zip" class="download-btn">Download Mod (26 MB)</a>
+                </div>
+            </div>
+
+            <div class="mod-card">
+                <img src="Picsart_26-04-06_09-53-41-710.jpg" alt="red gsrtc bus Mod">
+                <div class="mod-info">
+                    <h3> GSRTC RED GUJARNAGRI BUS MOD </h3>
+                    <p> REALISTIC INTERIOR, SOUND. BUS LOOK IS AMAZING.</p>
+                    <a href="mod2.zip" class="download-btn">Download Mod (18 MB)</a>
+                </div>
+            </div>
+            <div class="mod-card">
+                <img src="Picsart_26-04-06_11-24-00-100.jpg" alt="white gsrtc bus Mod">
+                <div class="mod-info">
+                    <h3> GSRTC WHITE EXPRESS BUS MOD </h3>
+                    <p> REALISTIC INTERIOR, SOUND. BUS LOOK IS AMAZING.</p>
+                    <a href="bs4stMod.zip" class="download-btn">Download Mod (10 MB)</a>
+                </div>
+            </div>
+
+            <div class="mod-card">
+                <img src="bf7bce9e-1e3f-43a0-a900-a72a142c3197.jpeg" alt="MOGALDHAM LIVERY">
+                <div class="mod-info">
+                    <h3> Mogal Dham Bus livery </h3>
+                    <p> REALISTIC BUS LIVERY.MOGALDHAM BUS LIVERY LIKE REAL </p>
+                    <a href="Picsart_26-03-31_19-46-29-135.png" class="download-btn">Download Mod (1 MB)</a>
+                </diV>
+            </div>
+        </div>
+
+        <div class="mod-card">
+            <img src="ea1561ee-89a7-41fe-9116-51664544e3f8.jpeg" alt="Mahadev Bus mod">
+            <div class="mod-info">
+                <h3> Mahadev Travels Bus Mod</h3>
+                <p> REALISTIC BUS Mod.Mahadev Travel BUS Mod.High Graphics Interior.</p>
+                <a href="https://sharemods.com/1bslng2bqqy8/bus_mod.zip.html" class="download-btn">Download Mod ( 31
+                    MB)</a>
+            </diV>
+        </div>
+
+
+    </div>
+
+    </div>
+    <footer>
+        <pre>&copy; 2026 Bus Simulator India Mods. 
+Website developed by DARPAN PRAJAPATi.</pre>
+        <pre>INSTAGRAM:- _darpan_prajapati_
+ YOUTUBE :- DM -BUSSIN GAMING
+</pre>
+    </footer>
+</body>
+
+</html>.mod-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
